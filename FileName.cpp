@@ -66,11 +66,11 @@ public:
 		return false;
 	}
 
-	const int1_t Index(std::size_t N) const{
+	const int1_t Index(std::size_t N) {
 		return Get(N) ? 1 : 0;
 	}
 
-	const int1_t operator[](std::intmax_t Idx) const{
+	const int1_t operator[](std::intmax_t Idx) {
 		return Index(Idx);
 	}
 
@@ -81,7 +81,7 @@ protected:
 void Print(BitMemory& In) {
 
 	for (std::size_t i = 0; i < In.Size(); i++) {
-		std::cout << In.Get(i);
+		std::cout << In.Index(i);
 	}
 	std::cout << std::endl;
 }
@@ -126,10 +126,10 @@ struct BitVector {
 		if (Size() < N) { return false; }
 		return Bits.Toggle(N);
 	}
-	const BitMemory::int1_t Index(std::size_t N) const{
+	const BitMemory::int1_t Index(std::size_t N) {
 		return Get(N) ? 1 : 0;
 	}
-	const BitMemory::int1_t operator[](std::size_t Idx) const{
+	const BitMemory::int1_t operator[](std::size_t Idx){
 		return Index(Idx);
 	}
 protected:
@@ -139,7 +139,7 @@ protected:
 
 void Print(BitVector& In) {
 	for (std::size_t i = 0; i < In.Size(); i++) {
-		std::cout << In.Get(i);
+		std::cout << In.Index(i);
 	}
 	std::cout << std::endl;
 }
