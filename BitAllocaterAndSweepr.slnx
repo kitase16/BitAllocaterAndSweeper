@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="BitAllocaterAndSweepr.vcxproj" />
+  <Project Path="BitAllocaterAndSweepr.vcxproj" Id="27f256f1-b3b3-4dce-8131-92bd5428d1f1" />
 </Solution>
